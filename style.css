@@ -1,0 +1,131 @@
+html {
+    background-color: #B7C8C9;
+}
+
+/*Category Styling*/
+.category {
+    z-index: 10;
+    position:fixed !important;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+}
+
+.cat-image {
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+}
+
+.cat-image img {
+    z-index: 10;
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+#pen+ink img {
+    object-position: 150% 0;
+}
+
+/*Mask Styling*/
+.img-mask {
+    position: absolute;
+    top: 0;
+    z-index: 15;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    -o-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+}
+
+.img-mask:hover {
+    opacity: 1;
+}
+
+.description-text {
+    display: block;
+    position: absolute;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 7em;
+    font-family: Arial;
+}
+
+.description-text a {
+    text-decoration: none;
+    color: white;
+}
+
+.description-text:hover {
+    text-decoration: underline;
+}
+
+/*Nav Styling*/
+#slider-nav {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 25;
+}
+
+#slider-nav > ul {
+    list-style: none;
+    padding: 0;
+}
+
+#slider-nav > ul > li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.fa-circle {
+    color: white;
+    font-size: 2em;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+#contact {
+    z-index: 25;
+    position: absolute;
+    border: 0;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    border-radius: 5px;
+    font-size: 1.7em;
+    text-decoration: underline;
+    font-family: Arial;
+    top: calc(80% + 75px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+

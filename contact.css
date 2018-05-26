@@ -1,0 +1,52 @@
+body {
+    
+    background-color: B7C8C9;
+    
+}
+
+#contactform {
+    position: absolute;
+    height: 60%;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    color: white;
+    font-family: Arial;
+    font-size: 2em;
+}
+
+textarea {
+    background-color: rgba(255,255,255,0.75);
+    font-size:0.7em;
+}
+
+#contactform input {
+    display: block;
+    font-size: 0.7em;
+    margin: 10px 0;
+    background-color: rgba(255,255,255,0.75);
+    vertical-align: top;
+}
+
+#contactform input:nth-child(1) {
+    height: 10%;
+}
+#contactform input:nth-child(2) {
+    height: 10%;
+    width: 40%;
+}
+#contactform input:nth-child(3) {
+    height: 40%;
+}
+
+#background {
+    height: 100%;
+    width: 100%;
+}
+
+#background-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

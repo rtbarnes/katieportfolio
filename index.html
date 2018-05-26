@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <title>Katie Dodds</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <div id="wrapper">
+            <div id="slider-nav">
+                <ul>
+                    <li>
+                        <i class="fas fa-circle"></i>
+                        <i class="far fa-circle" style="margin-left:-36px;"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-circle" style="opacity: 0;"></i>
+                        <i class="far fa-circle" style="margin-left:-36px;"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-circle" style="opacity: 0;"></i> 
+                        <i class="far fa-circle" style="margin-left:-36px;"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-circle" style="opacity: 0;"></i> 
+                        <i class="far fa-circle" style="margin-left:-36px;"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-circle" style="opacity: 0;"></i> 
+                        <i class="far fa-circle" style="margin-left:-36px;"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-circle" style="opacity: 0;"></i> 
+                        <i class="far fa-circle" style="margin-left:-36px;"></i>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="category" id="marinelife" style="display: none;">
+                <div class="cat-image">
+                    <img src="1.%20Marine%20Life.jpg">
+                </div>
+                <div class="img-mask">
+                    <a href="marinelife.html"><div class="description-text">Marine Life</div></a>
+                </div>
+            </div>
+            
+            <div class="category" id="flora+fauna" style="display: none;">
+                <div class="cat-image">
+                    <img src="2.%20Flora%20+%20Fauna.jpg">
+                </div>
+                <div class="img-mask">
+                    <a href="flora+fauna.html"><div class="description-text">Flora + Fauna</div></a>
+                </div>
+            </div>
+            
+            <div class="category" id="pen+ink" style="display: none;">
+                <div class="cat-image">
+                    <img src="3.%20Pen%20+%20Ink.jpg">
+                </div>
+                <div class="img-mask">
+                    <a href="pen+ink.html"><div class="description-text">Pen + Ink</div></a>
+                </div>
+            </div>
+            
+            <div class="category" id="koi" style="display: none;">
+                <div class="cat-image">
+                    <img src="4.%20Koi.jpg">
+                </div>
+                
+                <div class="img-mask">
+                    <a href="koi.html"><div class="description-text">Koi</div></a>
+                </div>
+            </div>
+            
+            <div class="category" id="humananatomy" style="display: none;">
+                <div class="cat-image">
+                    <img src="5.%20Human%20Anatomy.jpg">
+                </div>
+                <div class="img-mask">
+                    <a href="humananatomy.html"><div class="description-text">Human Anatomy</div></a>
+                </div>
+            </div>
+            
+            <div class="category" id="honey" style="display: none;">
+                <div class="cat-image">
+                    <img src="6.%20Honey.jpg">
+                </div>
+                <div class="img-mask">
+                    <a href="honey.html"><div class="description-text">Honey</div></a>
+                </div>
+            </div>
+            
+            <a id="contact" href="contact.html">contact</a>
+        </div>
+        
+        <script>
+            var waitTime = 3500;
+            
+            //initial cycle
+            cycleImages(waitTime);
+            
+            //timed repeater
+            setInterval(function() {
+                cycleImages(waitTime);
+            } , 21000);
+            
+            function cycleImages(waitTime) {
+                
+                $(".category").each(function(index) {
+                    var cat = $(this);
+                    //set rolling timers at 2s, 4s, etc. to toggle each category
+                    setTimeout(function() {
+                        cat.fadeIn(1000);
+                    }, waitTime * (index));
+                    setTimeout(function() {
+                        cat.fadeOut(1000);
+                    }, waitTime * (index + 1));
+                });
+
+               $(".fas").each(function(index) {
+                  var bubble = $(this);
+                   setTimeout(function() {
+                       bubble.animate({
+                           opacity: 1
+                       });
+                   }, waitTime * (index));
+                   setTimeout(function() {
+                       bubble.animate({
+                           opacity: 0
+                       });
+                   }, waitTime * (index + 1));
+               });
+            }
+        </script>
+    </body>
+    
+</html>
